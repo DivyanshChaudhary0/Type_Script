@@ -47,8 +47,10 @@ TypeScript provides several **built-in types** and supports **custom types** as 
   };
 
 
-  | Feature                 | JavaScript   | TypeScript          |
-| ----------------------- | ------------ | ------------------- |
+## ⚔️ TypeScript vs JavaScript
+
+| Feature                 | JavaScript   | TypeScript          |
+| -----------------------| -------------| --------------------|
 | Typing System           | Dynamic      | Static (optional)   |
 | Compilation             | Not required | Required            |
 | Error Checking          | Runtime      | Compile-time        |
@@ -56,6 +58,7 @@ TypeScript provides several **built-in types** and supports **custom types** as 
 | Learning Curve          | Easy         | Moderate            |
 | Code Scalability        | Difficult    | Easier and safer    |
 | Ecosystem Compatibility | Native       | Needs transpilation |
+
 
 
 ```ts
