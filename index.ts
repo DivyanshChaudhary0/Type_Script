@@ -28,5 +28,15 @@ const obj1: {name:string, age:number} = {
 }
 
 
+// tuples
 const customArr : [number, string] = [40,"Bhola Chaudhary"]
 
+const cordinates3D : [number,number,number] = [10,20,30];
+
+const userData: [string, number] = ["name", 1234]
+
+const response: [number, string] = [200, "Success"];
+// response.push(0);   drawback of tuples
+
+
+// enums
