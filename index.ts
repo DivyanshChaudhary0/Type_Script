@@ -126,3 +126,87 @@ function printId(id: string | number){
 }
 
 // interface
+interface Person{
+    name: string,
+    age: number
+}
+
+let person: Person = {
+    name: "Bhola",
+    age: 30
+}
+
+interface MathOp{
+    (a:number, b:number): number;
+}
+
+let add: MathOp = (x,y) => x+y;
+let subtract: MathOp = (x,y) => x-y;
+
+console.log(add(10,15),subtract(15,10));
+
+
+// type alias
+
+type Person1 = {
+    name: string,
+    age: number
+}
+
+let person1: Person = {
+    name: "Jaat",
+    age: 100
+}
+
+type ID = string | number;
+let userID: ID = 'Divyansh';
+userID = 200
+
+
+// Difference between alias and interface
+interface User{
+    name: string,
+    age: number
+}
+
+interface User{
+    address: string
+}
+
+// it is merged in User
+
+let user: User = {
+    name: "Something",
+    age: 100,
+    address: "Khera sattu"
+}
+
+type User1 = {
+    name: string,
+    age: number
+}
+
+// type User1 = {
+//     address: string
+// }                                                        can not write like this
+
+type User2 = User1 & {
+    address: string
+}
+
+// Now User2 have the User1 and User2 properties itself
+
+// Optional Properties
+
+interface Animal {
+    name: string,
+    weight?: string,
+    food?: string,
+    age: number
+}
+
+let tiger: Animal = {
+    name: "tiger",
+    age: 30,
+    food: "non-veg"
+}
