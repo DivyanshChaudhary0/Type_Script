@@ -16,6 +16,9 @@ console.log(bool);
 const arr: number[] = [1,2,3,4];
 const str: string[] = ['sheetal','divyansh','manish']
 
+let newArr: number[] = arr.map((val) => val*2);
+let newStr: string[] = str.map((val) => val.concat('sh'));
+
 const obj: object = {
     name: "Ram",
     age: 20,
