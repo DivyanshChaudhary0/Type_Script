@@ -96,11 +96,11 @@ else if(typeof(notSure) === 'string'){
 
 
 // void
-function sum(a:number,b:number):void {
-    console.log(a+b);
+// function sum(a:number,b:number):void {
+//     console.log(a+b);
     // return undefined; valid
     // return null; not valid
-}
+// }
 
 
 // type inference and type assertion
@@ -164,22 +164,22 @@ userID = 200
 
 
 // Difference between alias and interface
-interface User{
-    name: string,
-    age: number
-}
+// interface User{
+//     name: string,
+//     age: number
+// }
 
-interface User{
-    address: string
-}
+// interface User{
+//     address: string
+// }
 
 // it is merged in User
 
-let user: User = {
-    name: "Something",
-    age: 100,
-    address: "Khera sattu"
-}
+// let user: User = {
+//     name: "Something",
+//     age: 100,
+//     address: "Khera sattu"
+// }
 
 type User1 = {
     name: string,
