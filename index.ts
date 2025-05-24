@@ -43,3 +43,24 @@ const response: [number, string] = [200, "Success"];
 
 
 // enums
+
+enum Color {
+    Red = 'red',
+    Green = 'green',
+    Yellow = 'yellow'
+}
+
+const color: Color = Color.Red
+
+// let small = 1
+// let medium = 2
+// let large = 3
+
+enum Size {
+    Small = 1,
+    Medium,
+    Large
+}
+
+let size: Size = Size.Medium;
+console.log(size);
