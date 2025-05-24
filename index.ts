@@ -56,6 +56,12 @@ const color: Color = Color.Red
 // let medium = 2
 // let large = 3
 
+// const enum Size {
+//     Small = 1,
+//     Medium,
+//     Large
+// }
+
 enum Size {
     Small = 1,
     Medium,
@@ -64,3 +70,26 @@ enum Size {
 
 let size: Size = Size.Medium;
 console.log(size);
+
+// unknown
+const notSure: unknown = 'a'
+if(typeof(notSure) === 'number'){
+    console.log(notSure);
+}
+else if(typeof(notSure) === 'string'){
+    console.log(notSure.charAt(1));   
+}
+
+// never 
+
+function infiniteLoop(): never {
+    while(true){
+        console.log(1);
+    }
+}
+
+function throwError(message: string): never{
+    throw new Error(message)
+}
+
+throwError("Something went wrong");
