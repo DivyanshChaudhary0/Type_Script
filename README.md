@@ -72,6 +72,7 @@ const user = {
 };
 
 console.log(greet(user.name));
+```
 
 
 ## `TypeScript Advanced Types`
