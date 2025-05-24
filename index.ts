@@ -77,22 +77,22 @@ if(typeof(notSure) === 'number'){
     console.log(notSure);
 }
 else if(typeof(notSure) === 'string'){
-    console.log(notSure.charAt(1));   
+    console.log(notSure.charAt(0));   
 }
 
 // never 
 
-function infiniteLoop(): never {
-    while(true){
-        console.log(1);
-    }
-}
+// function infiniteLoop(): never {
+//     while(true){
+//         console.log(1);
+//     }
+// }
 
-function throwError(message: string): never{
-    throw new Error(message)
-}
+// function throwError(message: string): never{
+//     throw new Error(message)
+// }
 
-throwError("Something went wrong");
+// throwError("Something went wrong");
 
 
 // void
@@ -103,3 +103,26 @@ function sum(a:number,b:number):void {
 }
 
 
+// type inference and type assertion
+let num = 10;  // the type is automatically assigned, that is type inference
+
+let someValue: any = "Hello World";
+// let strLength = someValue.length;  But suggestions are not coming here
+let strLength = (someValue as string).length;
+console.log(strLength);
+
+
+// union types
+let id: number | string = 10;
+id = 'divyansh'
+
+function printId(id: string | number){
+    if(typeof id  === "string"){
+        console.log(id.toUpperCase());
+    }
+    else{
+        console.log(id);
+    }
+}
+
+// interface
