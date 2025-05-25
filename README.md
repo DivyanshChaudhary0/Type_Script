@@ -225,3 +225,147 @@ let record: [string, number?, ...boolean[]];
 ---
 
 Use TypeScript's advanced types to write safe, scalable, and maintainable code. Choose the right type for the right context.
+
+# TypeScript - Core Concepts: Type Inference, Assertion, Functions, and Class Access Modifiers
+
+This README covers essential TypeScript concepts including:
+
+* Type Inference
+* Type Assertion
+* Functions (Regular, Expression, Arrow, Default Parameters)
+* Access Modifiers in Classes
+
+---
+
+## 🔹 Type Inference
+
+### 📖 Definition:
+
+TypeScript can automatically infer the type of a variable based on the assigned value.
+
+### ✅ Example:
+
+```ts
+let message = "Hello"; // inferred as string
+// message = 10; ❌ Error: number not assignable to string
+```
+
+---
+
+## 🔹 Type Assertion
+
+### 📖 Definition:
+
+Type assertion lets you tell the compiler the exact type of a variable.
+
+### ✅ Syntax:
+
+```ts
+let someValue: any = "this is a string";
+let strLength = (someValue as string).length;
+// or
+let strLength2 = (<string>someValue).length;
+```
+
+---
+
+## 🔹 Functions
+
+### 1. Regular Function
+
+```ts
+function greet(name: string): string {
+  return `Hello, ${name}`;
+}
+```
+
+### 2. Function Expression
+
+```ts
+const greet = function(name: string): string {
+  return `Hello, ${name}`;
+};
+```
+
+### 3. Arrow Function
+
+```ts
+const greet = (name: string): string => `Hello, ${name}`;
+```
+
+### 4. Function with Default Parameter
+
+```ts
+function greet(name: string = "Guest"): string {
+  return `Hello, ${name}`;
+}
+```
+
+---
+
+## 🔹 Access Modifiers in Classes
+
+### 1. Public
+
+Accessible from anywhere. Default modifier.
+
+```ts
+class User {
+  public name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+```
+
+### 2. Private
+
+Accessible only within the class.
+
+```ts
+class User {
+  private password: string;
+  constructor(password: string) {
+    this.password = password;
+  }
+}
+```
+
+### 3. Protected
+
+Accessible within the class and subclasses.
+
+```ts
+class User {
+  protected role: string;
+  constructor(role: string) {
+    this.role = role;
+  }
+}
+
+class Admin extends User {
+  getRole() {
+    return this.role; // ✅ Accessible
+  }
+}
+```
+
+---
+
+## ✅ Summary
+
+| Feature          | Description                             |
+| ---------------- | --------------------------------------- |
+| Type Inference   | TS auto-detects type                    |
+| Type Assertion   | Developer specifies the type explicitly |
+| Regular Function | Standard named function                 |
+| Expression Fn    | Function stored in a variable           |
+| Arrow Function   | Concise syntax with `=>`                |
+| Default Param    | Fallback value if no argument passed    |
+| Public           | Accessible everywhere                   |
+| Private          | Only within class                       |
+| Protected        | Within class and subclasses only        |
+
+---
+
+TypeScript provides static type checking to help developers write safer and more maintainable code. Understanding and using these core concepts enhances productivity and code quality.
