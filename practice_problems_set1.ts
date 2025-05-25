@@ -58,3 +58,50 @@ let product: Product[] = [
 ]
 
 console.log(calculateTotal(product));
+
+
+// Define a union type for a vehicle that can either be a bike or a car with different properties,
+// Write a function to log details based on the vehicle type
+
+
+type Bike = {
+    type: "bike",
+    name: string,
+    price: number,
+    model: string
+}
+
+type Car = {
+    type: 'car',
+    name: string,
+    price: number,
+    model: string
+}
+
+type VehicleData = Bike | Car
+
+function showDetails(vehicle: VehicleData){
+    if(vehicle.type === 'bike'){
+        console.log("Bike");
+    }
+    else{
+        console.log("Car");
+    }
+}
+
+let myCar: VehicleData = {
+    type: "car",
+    name: "Swift",
+    price: 120000,
+    model: 'dont know'
+}
+
+let myBike: VehicleData = {
+    type: "bike",
+    name: "Hero_Honda",
+    price: 100000,
+    model: 'Splendor'
+}
+
+showDetails(myBike);
+showDetails(myCar);
