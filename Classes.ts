@@ -41,3 +41,33 @@ const swift = new Car5('Swift','Z15442',200000);  // we can only access getModel
 console.log(swift.getModel());
 console.log(swift.name);
 
+
+// Inheritance
+
+class Animal{
+    constructor(public name:string){
+
+    }
+
+    getVoice(): string{
+        return `Some voice ....`
+    }
+
+    getName(): string{
+        return `Dog name is ${this.name}`
+    }
+}
+
+class Dog extends Animal{
+    constructor(public name: string){
+        super(name);
+    }
+
+    getVoice(): string {
+        return 'woff! woff! woff!'
+    }
+}
+
+const dog = new Dog('Sheruuu');
+console.log(dog.getVoice());
+console.log(dog.getName())
