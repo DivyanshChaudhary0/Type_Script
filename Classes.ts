@@ -71,3 +71,26 @@ class Dog extends Animal{
 const dog = new Dog('Sheruuu');
 console.log(dog.getVoice());
 console.log(dog.getName())
+
+
+abstract class Shape{
+    abstract getArea(): number;
+
+    printArea(): void{
+        console.log(`Area is ${this.getArea()}`)
+    }
+
+}
+
+class Rectangle extends Shape{
+    constructor(public width:number, public height:number){
+        super();
+    }
+
+    getArea(): number{
+        return this.width * this.height
+    }
+}
+
+const rect = new Rectangle(10,20);
+rect.printArea();
