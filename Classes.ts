@@ -94,3 +94,32 @@ class Rectangle extends Shape{
 
 const rect = new Rectangle(10,20);
 rect.printArea();
+
+
+// getter and setter in classes
+
+class Circle{
+    private _radius: number;
+
+    constructor(radius:number){
+        this._radius = radius;
+    }
+
+    get radius(): number{
+        return this._radius;
+    }
+
+    set radius(value) {
+        if(value < 0){
+            throw new Error("Radius must be positive");
+        }
+        this._radius = value;
+    }
+}
+
+
+let circle = new Circle(10);
+console.log(circle.radius);
+
+circle.radius = 20;
+console.log(circle.radius);
