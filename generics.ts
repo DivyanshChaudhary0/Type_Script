@@ -17,3 +17,16 @@ function getFirstElement<T>(arr: T[]): T {
 }
 
 const first = getFirstElement<number>([1, 2, 3]);
+
+
+// interface generics
+interface keyPair<T,U> {
+  key: T,
+  value: U
+}
+
+let keyPairValue: keyPair<string,number> = {
+  key: 'pair',
+  value: 10
+}
+
