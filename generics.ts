@@ -60,3 +60,26 @@ console.log(numberBox.getContent());
 const stringBox = new Box('Bhola');
 console.log(stringBox.getContent());
 
+
+class Stack<T> {
+  private items: T[] = []
+
+  push(value:T):void {
+    this.items.push(value)
+  }
+
+  pop():T | undefined {
+    return this.items.pop();
+  }
+
+  getItems(): T[] {
+    return this.items;
+  }
+
+}
+
+let stack = new Stack();
+stack.push(10);
+stack.push(20);
+console.log(stack.getItems());
+console.log(stack.pop());
