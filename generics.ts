@@ -37,4 +37,26 @@ function getLength<T extends {length: number}>(item:T):number {
 
 console.log(getLength('Hello'));
 console.log(getLength([1,2,3,4,5]));
+// console.log(getLength(123))  can not get the length
+
+
+// class generics
+class Box<T> {
+  content: T ;
+
+  constructor(value: T){
+    this.content = value;
+  }
+
+  getContent():T {
+    return this.content;
+  }
+
+}
+
+const numberBox = new Box(20);
+console.log(numberBox.getContent());
+
+const stringBox = new Box('Bhola');
+console.log(stringBox.getContent());
 
