@@ -78,8 +78,18 @@ class Stack<T> {
 
 }
 
-let stack = new Stack();
-stack.push(10);
-stack.push(20);
-console.log(stack.getItems());
-console.log(stack.pop());
+let numberStack = new Stack<number>();
+numberStack.push(10);
+numberStack.push(20);
+console.log(numberStack.getItems());
+console.log(numberStack.pop());
+
+
+let stringStack = new Stack<string>();
+stringStack.push('Hello');
+stringStack.push('Hello');
+stringStack.push('Hello');
+console.log(stringStack.getItems());
+console.log(stringStack.pop());
+console.log(stringStack.getItems());
+
