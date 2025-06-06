@@ -99,7 +99,7 @@ type isVisible = true | false;
 
 type Action = 'add' | 'delete' | 'update'
 
-function takeAction(action: Action){
+function takeAction(action: Action): void{
   switch(action){
     case 'add': 
       console.log("Add");
@@ -116,3 +116,10 @@ function takeAction(action: Action){
   }
 }
 
+
+function printStatus(status: 'success' | 'error' | 'loading'): void{
+  console.log(status);
+}
+
+printStatus('success');
+printStatus('loading');
