@@ -93,3 +93,26 @@ console.log(stringStack.getItems());
 console.log(stringStack.pop());
 console.log(stringStack.getItems());
 
+// Literal types
+
+type isVisible = true | false;
+
+type Action = 'add' | 'delete' | 'update'
+
+function takeAction(action: Action){
+  switch(action){
+    case 'add': 
+      console.log("Add");
+      break;
+
+    case 'delete':
+      console.log("delete");
+      break;
+
+    case 'update':
+      console.log("update");
+      break;
+
+  }
+}
+
