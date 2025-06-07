@@ -135,3 +135,18 @@ const Btn: ButtonConfig = {
   color: 'green'
 }
 
+/*
+  Index signature is used to define types of objects that can have properties of dynamic keys, where the 
+  keys are not known in advance but you still enforce the type of the value.
+*/
+
+interface Fruits {
+  [key: string]: string
+}
+
+const fruitsArray: Fruits = {
+  apple: "A red fruit",
+  banana: "A yellow fruit"
+}
+
+console.log(fruitsArray['apple']);
