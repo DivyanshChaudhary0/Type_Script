@@ -123,3 +123,15 @@ function printStatus(status: 'success' | 'error' | 'loading'): void{
 
 printStatus('success');
 printStatus('loading');
+
+
+interface ButtonConfig {
+  size: 'small' | 'medium' | 'large'
+  color: 'white' | 'black' | 'green'
+}
+
+const Btn: ButtonConfig = {
+  size: 'medium',
+  color: 'green'
+}
+
