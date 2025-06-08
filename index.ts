@@ -205,8 +205,8 @@ interface Animal {
     age: number
 }
 
-let tiger: Animal = {
-    name: "tiger",
-    age: 30,
-    food: "non-veg"
-}
+// let tiger: Animal = {
+//     name: "tiger",
+//     age: 30,
+//     food: "non-veg"
+// }
