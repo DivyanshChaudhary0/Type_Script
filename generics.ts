@@ -151,3 +151,4 @@ const fruitsArray: Fruits = {
 
 console.log(fruitsArray['apple']);
 
+
